@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "778608957901",
+    "project_id": "react-native-a332c",
+    "storage_bucket": "react-native-a332c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778608957901:android:6fb534c725231865120c84",
+        "android_client_info": {
+          "package_name": "com.awesomeproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "778608957901-bs1f5l0q41b1qm9ah8r2l4nb234t9hdd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZbDSilTPbrvk--CZXy232l0JrQMASUOc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "778608957901-67pblp7jp12thfrbgpdluq3h91qrn6gd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
