@@ -87,7 +87,6 @@ const RegisterScreen = () => {
         <Text style={{marginBottom: 20}}>Forgot Password?</Text>
         <Text
           onPress={() => {
-            // handleLogin()
             handleCreateAccount()
           }}
           style={styles.button}>
@@ -107,21 +106,6 @@ const RegisterScreen = () => {
             Login here
           </Text>
         </View>
-
-        {/* <Text
-          onPress={() => {
-            signOut()
-          }}
-          style={styles.button}>
-          SIGN OUT
-        </Text> */}
-        {/* <Text
-          onPress={() => {
-            getCurrentUser()
-          }}
-          style={styles.button}>
-          <Icon style={styles.icon} name='google' size={25} color='#fff' />
-        </Text> */}
       </View>
     </View>
   )
