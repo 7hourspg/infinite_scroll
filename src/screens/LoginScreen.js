@@ -41,17 +41,15 @@ const LoginScreen = () => {
       Alert.alert('Error ❌', 'Please fill in all fields')
       return
     }
-    try {
-      auth()
-        .signInWithEmailAndPassword(userInput.email, userInput.password)
-        .then(user => {
-          handleUserInfo(user)
-          Alert.alert('Success ✅', 'Login successfully')
-        })
-    } catch (error) {
-      Alert.alert('Error ❌', 'Something went wrong')
-      console.log('ERROR', error)
-    }
+    auth()
+      .signInWithEmailAndPassword(userInput.email, userInput.password)
+      .then(user => {
+        handleUserInfo(user)
+        Alert.alert('Success ✅', 'Login successfully')
+      })
+      .catch(error => {
+        Alert.alert('Error ❌', 'Invalid email or password')
+      })
   }
 
   useEffect(() => {

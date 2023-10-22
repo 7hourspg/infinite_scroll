@@ -8,7 +8,14 @@ import AppStack from './AppStack'
 import {AuthContext} from '../context/AuthContext'
 
 const AppNav = () => {
-  const {userInfo} = React.useContext(AuthContext)
+  const {userInfo, isLoading} = React.useContext(AuthContext)
+
+  if (isLoading)
+    return (
+      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+        <Text style={{fontSize:18}}>Loading...</Text>
+      </View>
+    )
 
   return (
     <NavigationContainer>

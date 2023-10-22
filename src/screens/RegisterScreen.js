@@ -6,10 +6,8 @@ import {
   TouchableOpacity,
   Alert,
 } from 'react-native'
-import React, {useState, useContext, useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 import {useNavigation} from '@react-navigation/native'
-
-import {AuthContext} from '../context/AuthContext'
 
 import Icon from 'react-native-vector-icons/AntDesign'
 
@@ -25,8 +23,6 @@ const RegisterScreen = () => {
 
   const [isPasswordVisible, setIsPasswordVisible] = useState(false)
 
-  const [initializing, setInitializing] = useState(true)
-
   const navigation = useNavigation()
 
   const handleInputChange = (name, value) => {
@@ -35,8 +31,6 @@ const RegisterScreen = () => {
       [name]: value,
     })
   }
-
-  const {handleUserInfo} = useContext(AuthContext)
 
   const handleCreateAccount = () => {
     if (!userInput.email || !userInput.password) {

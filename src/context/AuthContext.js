@@ -6,9 +6,11 @@ export const AuthContext = createContext(null)
 
 const AuthProvider = ({children}) => {
   const [userInfo, setUserInfo] = useState(null)
+  const [isLoading, setIsLoading] = useState(true)
 
   const handleUserInfo = async userInfo => {
     setUserInfo(userInfo)
+    setIsLoading(false)
     try {
       await AsyncStorage.setItem('userInfo', JSON.stringify(userInfo))
     } catch (e) {
@@ -19,6 +21,7 @@ const AuthProvider = ({children}) => {
   const getUserInfo = async () => {
     try {
       const value = await AsyncStorage.getItem('userInfo')
+      setIsLoading(false)
 
       setUserInfo(JSON.parse(value))
     } catch (e) {
@@ -36,6 +39,7 @@ const AuthProvider = ({children}) => {
         userInfo,
         handleUserInfo,
         getUserInfo,
+        isLoading,
       }}>
       {children}
     </AuthContext.Provider>

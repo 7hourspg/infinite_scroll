@@ -5,6 +5,7 @@ import {
   FlatList,
   ActivityIndicator,
   Image,
+  Alert,
 } from 'react-native'
 import React, {useEffect} from 'react'
 import auth from '@react-native-firebase/auth'
@@ -34,7 +35,7 @@ const Home = () => {
         setIsLoading(false)
       })
       .catch(error => {
-        console.error('Error fetching data:', error)
+        Alert.alert('Error', 'Something went wrong')
         setIsLoading(false)
       })
   }
